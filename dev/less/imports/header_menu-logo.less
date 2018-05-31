@@ -1,0 +1,115 @@
+.menu-logo-wrapper{
+	.menu-logo{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		position: relative;
+		.logo{
+			width: 152px;
+			height: 30px;
+			background: url('../img/logo.png') no-repeat;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		#main-nav{
+			width: 100%;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			padding-left: 10%;
+			ul{
+				li{
+					max-height: 0;
+					max-width: 100% !important;
+					opacity: 0;
+					display: flex;
+					align-items: center;
+					height: 40px;
+					font-size: 15px;
+					text-transform: uppercase;
+					font-family: 'Roboto-Medium';
+					color: @menu-text-color;
+					a{
+						color: inherit;
+					}
+					&.active{
+						.cyan-text;
+					}
+				}
+			}
+		}
+		#hide-menu-btn{
+			@h: 32px;
+			@span-h: 2px;
+			@p: 8px;
+			@b: 1px;
+			display: inline-block;
+			width: 44px;
+			height: @h;
+			border: @b solid #2c3e50;
+			border-radius: 5px;
+			box-sizing: border-box;
+			padding: @p;
+			cursor: pointer;
+			vertical-align: middle;
+			&.active,
+			&:hover{
+				background-color: #2c3e50;
+				span{
+					background-color: #fff;
+				}
+			}
+			span{
+				display: block;
+				height: @span-h;
+				background-color: #2c3e50;
+				margin-top: (@h - @b * 2 - @p * 2 - @span-h * 3) / 2;
+				border-radius: 20px;
+				&:first-child{
+					margin-top: 0;
+				}
+			}
+		}
+		.search{
+			@size: 35px;
+			height: @size;
+			width: @size;
+			box-sizing: border-box;
+			display: none;
+			font-size: 13px;
+			color: #2c3e50;
+			border: 3px solid #2c3e50;
+			border-radius: 500px;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+}
+
+@media screen and (min-width: @lg-screen-width){
+	.menu-logo-wrapper{
+		.menu-logo{
+			#main-nav{
+				padding: 0;
+				width: auto;
+				ul{
+					display: flex;
+					li{
+						max-height: 500px !important;
+						opacity: 1 !important;
+						padding: 0 18px;
+					}
+				}
+			}
+			#hide-menu-btn{
+				display: none;
+			}
+			.search{
+				margin-left: 18px;
+				display: flex;
+			}
+		}
+	}
+}

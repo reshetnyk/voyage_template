@@ -1,0 +1,209 @@
+#find-your-holydays{
+	color: #9fb0c0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5px 0;
+	header{
+		text-transform: uppercase;
+		border-width: 0 0 1px 0;
+		border-style: solid;
+		border-color: #3a4e61;
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 25px;
+		&:before,
+		&:after{
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&:before{
+			border-left: @form-triangle-size solid transparent;
+			border-right: @form-triangle-size solid transparent;
+			border-top: @form-triangle-size solid #3a4e61;
+			bottom: -@form-triangle-size;
+		}
+		&:after{
+			@size: @form-triangle-size - 1.7px;
+			border-left: @size solid transparent;
+			border-right: @size solid transparent;
+			border-top: @size solid @bluegray-color;
+			bottom: -@size + 0.2px;
+		}
+		.accent{
+			font-size: 21px;
+			color: white;
+			font-family: 'Roboto-Bold';
+			padding-left: 10px;
+		}
+	}
+	label{
+		font-size: 18px;
+		font-family: 'Roboto-Light';
+		text-align: center;
+		width: 30%;
+	}
+	input[type=text]{
+		border: 1px solid #19242e;
+		width: 50%;
+	}
+	input[type=submit]{
+		.second-button(25%);
+		text-transform: none;
+		border-radius: 0;
+	}
+	input[type=submit],
+	input[type=text],
+	label{
+		height: 30px;
+	}
+	input[type=submit],
+	input[type=text],
+	header{
+		font-family: 'Roboto-Regular';
+	}
+	header,
+	input[type=submit],
+	input[type=text]{
+		font-size: 16px;
+	}
+	input[type=text],
+	label{
+		margin-bottom: 20px;
+		&:first-of-type{
+			margin-bottom: 8px;
+		}
+	}
+	.fields{
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+		align-items: center;
+		position: relative;
+		flex-wrap: wrap;
+	}
+	.where{
+		&:after{
+			content: '\f107';
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			font-size: 28px;
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			color: black;
+		}
+	}
+}
+@media screen and (min-width: @lg-screen-width){
+	#find-your-holydays{
+		flex-direction: row;
+		height: 90px;
+		padding: 0;
+		header{
+			width: auto;
+			height: 100%;
+			flex-direction: column;
+			padding-right: 35px;
+			margin-bottom: 0;
+			align-items: initial;
+			border-width: 0 1px 0 0;
+			flex: 0 0 auto;
+			&:before,
+			&:after{
+				left: initial;
+				bottom: initial;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&:before{
+				border: none;
+				border-top: @form-triangle-size solid transparent;
+				border-bottom: @form-triangle-size solid transparent;
+				border-left: @form-triangle-size solid #3a4e61;
+				right: -@form-triangle-size;
+			}
+			&:after{
+				@size: @form-triangle-size - 1.7px;
+				border: none;
+				border-top: @size solid transparent;
+				border-bottom: @size solid transparent;
+				border-left: @size solid @bluegray-color;
+				right: -@size + 0.2px;
+			}
+			.accent{
+				padding: 0;
+			}
+		}
+		.fields{
+			flex: 1 0 auto;
+			flex-wrap: nowrap;
+			width: auto;
+			input[type=text],
+			input[type=submit],
+			label{
+				margin: 0;
+				width: auto;
+			}
+			input[type=text]{
+				width: 220px;
+			}
+			input[type=submit]{
+				width: 75px;
+			}
+			input[type=text],
+			input[type=submit]{
+				height: 42px;
+			}
+			& *:first-child{
+				padding-left: 10px;
+			}
+		}
+		header,
+		input[type=submit],
+		input[type=text]{
+			font-size: 18px;
+		}
+		label{
+			font-size: 20px;
+		}
+		header .accent{
+			font-size: 23px;
+		}
+	}
+}
+@media screen and (min-width: @xl-screen-width){
+	#find-your-holydays{
+		height: 105px;
+		.fields{
+			input[type=text]{
+				width: 325px;
+			}
+			input[type=submit]{
+				width: 105px;
+			}
+			input[type=text],
+			input[type=submit]{
+				height: 49px;
+			}
+		}
+		header,
+		input[type=submit],
+		input[type=text]{
+			font-size: 20px;
+		}
+		label{
+			font-size: 22px;
+		}
+		header .accent{
+			font-size: 25px;
+		}
+	}
+}

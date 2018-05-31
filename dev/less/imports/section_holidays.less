@@ -1,0 +1,65 @@
+#holidays{
+	position: relative;
+	background-image: url('../img/holidays_bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	.mask{
+		background-color: rgba(44, 62, 80, 0.8);
+	}
+	.container{
+		padding-top: 80px;
+		padding-bottom: 100px;
+	}
+	.section-header{	
+		h2{
+			color: #fff;
+		}
+		.explanation{
+			color: #9eafc0;
+		}
+	}
+	.holidays-types{
+		.holiday{
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			margin-bottom: 20px;
+			text-decoration: none;
+			.holiday-image{
+				width: 172px;
+				height: 172px;
+				display: inline-block;
+			}
+			&-adventure{
+				.set-holiday-bg(adventure);
+			}
+			&-beach{
+				.set-holiday-bg(beach);
+			}
+			&-city-breaks{
+				.set-holiday-bg(city-breaks);
+			}
+			&-cruise{
+				.set-holiday-bg(cruise);
+			}
+			&-honeymoon{
+				.set-holiday-bg(honeymoon);
+			}
+			&-safari{
+				.set-holiday-bg(safari);
+			}
+			.holiday-name{
+				font-family: 'Roboto-Regular';
+				font-size: 20px;
+				color: #9dafc0;
+			}
+			&:hover{
+				.holiday-name{
+					color: @cyan-color;
+				}
+			}
+		}
+	}
+}

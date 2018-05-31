@@ -1,0 +1,14 @@
+.size(@size){
+	height: @size;
+	width: @size;
+}
+.set-holiday-bg(@img-name){
+	.holiday-image{
+		background-image: url(~"@{path-to-img}/@{img-name}.png");
+	}
+	&:hover{
+		.holiday-image{
+			background-image: url(~"@{path-to-img}/@{img-name}_h.png");
+		}
+	}
+}

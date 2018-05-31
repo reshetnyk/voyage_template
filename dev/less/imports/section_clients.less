@@ -1,0 +1,112 @@
+#clients{
+	padding-top: 65px;
+	padding-bottom: 105px;
+	position: relative;
+	#clients-carousel{
+		.item{
+			top:50%;
+			transform: translateY(-50%);
+			font-family: 'Roboto-Regular';
+			width: 250px;
+			//width: 475px;
+			box-sizing: border-box;
+			padding: 20px 25px;
+			border: 1px solid #dedede;
+			margin: 0 9px 40px 9px;
+			opacity: 0.5;
+			position: relative;
+			@tr-size: 80px;
+			@tr-rotare: -30deg;
+			&:before{
+				content: '';
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #fff;
+				z-index: -1;
+			}
+			.triangle{
+				display: inline-block;
+				position: absolute;
+				width: @tr-size;
+				height: @tr-size;
+				transform: scaleX(0.5) rotate(45deg);
+				z-index: -2;
+				bottom: -8%;
+				right: 8%;
+				&:before{
+					content: '';
+					display: inline-block;
+					position: absolute;
+					top: 1px;
+					bottom: 1px;
+					left: 1px;
+					right: 1px;
+					background-color: #fff;
+					transform: rotate(45deg) rotate(@tr-rotare);
+					background-color: #fff;
+					border: 1px solid #dedede;
+				}
+			}
+			.msg{
+				color: #4d4d4d;
+				font-size: 15px;
+				padding-bottom: 5px;
+				text-align: justify;
+			}
+			.name{
+				color: @cyan-color;
+				font-size: 18px;
+			}
+			.country{
+				color: #b2b2b2;
+				font-size: 13px;
+			}
+			&.is-selected{
+				opacity: 1;
+				z-index: 0;
+				@tr-rotare: -55deg;
+				&:before{
+					box-shadow: inset 0px 4px 0px 0px @cyan-color;
+				}
+				.triangle{
+					transform: scaleX(0.9) rotate(45deg);
+					bottom: -3%;
+					&:before{
+						transform: rotate(45deg) rotate(@tr-rotare);
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: @sm-screen-width){
+	#clients{
+		#clients-carousel{
+			.item{
+				width: 300px;
+			}
+		}
+	}
+}
+@media screen and (min-width: @md-screen-width){
+	#clients{
+		#clients-carousel{
+			.item{
+				width: 350px;
+			}
+		}
+	}
+}
+@media screen and (min-width: @lg-screen-width){
+	#clients{
+		#clients-carousel{
+			.item{
+				width: 475px;
+			}
+		}
+	}
+}
