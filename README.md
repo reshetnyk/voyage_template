@@ -7,7 +7,7 @@
 	- Less.
 **In this project were used such libraries:**
 
-	- Jquery;
+	- JQuery;
 	- Bootstrap;
 	- Flickity carousel.
 To watch **Demo** you can [here](https://reshetnyk.000webhostapp.com/voyage/).
