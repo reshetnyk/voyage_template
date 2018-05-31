@@ -16,3 +16,4 @@
 	
 	- Flickity carousel.
 	
+To watch **Demo** you will here [here](https://reshetnyk.000webhostapp.com/voyage/).
