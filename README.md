@@ -1,6 +1,6 @@
 # Voyage #
 ## This is my first adaptive site  ##
-**In this project was used such technologies:**
+**In this project were used such technologies:**
 
 	- Gulp;
 	
@@ -8,7 +8,7 @@
 	
 	- Less.
 	
-**In this project was used such libraries:**
+**In this project were used such libraries:**
 
 	- Jquery;
 	
