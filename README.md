@@ -10,4 +10,4 @@
 	- JQuery;
 	- Bootstrap;
 	- Flickity carousel.
-To watch **Demo** you can [here](https://reshetnyk.000webhostapp.com/voyage/).
+To watch **Demo** you can [here](https://reshetnyk.github.io/voyage_template/build/).
