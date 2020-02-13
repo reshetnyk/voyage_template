@@ -1,5 +1,5 @@
 # Voyage #
-## This is my first adaptive site  ##
+## This is responsive template  ##
 **In this project were used such technologies:**
 
 	- Gulp;
